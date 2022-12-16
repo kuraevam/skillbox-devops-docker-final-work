@@ -23,7 +23,7 @@ services:
       - ./gitlab/gitlab_home/logs:/var/logs/gitlab
       - ./gitlab/gitlab_home/data:/var/opt/gitlab
   rocketchat:
-    image: rocket.chat
+    image: registry.rocket.chat/rocketchat/rocket.chat
     ports:
       - '3000:3000'
     environment:
