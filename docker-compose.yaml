@@ -10,7 +10,7 @@ services:
       - ./ldap/data/slapd/config:/etc/ldap/slapd.d
   ldap_admin:
     image: osixia/phpldapadmin
-    volumes:
+    ports:
       - '6443:443'
     environment:
       - PHPLDAPADMIN_LDAP_HOSTS=ldap
