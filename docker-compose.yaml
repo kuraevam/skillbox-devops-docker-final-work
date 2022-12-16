@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ldap:
+    image: osixia/openldap
+    environment:
+      - LDAP_DOMAIN=kuraevam.com
+      - LDAP_ADMIN_PASSWORD=123QWEasd
+    volumes:
+      - ./ldap/data/slapd/database:/var/lib/ldap
+      - ./ldap/data/slapd/config:/etc/ldap/slapd.d
