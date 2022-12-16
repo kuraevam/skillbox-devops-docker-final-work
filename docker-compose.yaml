@@ -8,3 +8,9 @@ services:
     volumes:
       - ./ldap/data/slapd/database:/var/lib/ldap
       - ./ldap/data/slapd/config:/etc/ldap/slapd.d
+  ldap_admin:
+    image: osixia/phpldapadmin
+    volumes:
+      - '6443:443'
+    environment:
+      - PHPLDAPADMIN_LDAP_HOSTS=ldap
